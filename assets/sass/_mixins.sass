@@ -1,0 +1,20 @@
+// Screen Sizes
+
+@mixin mobile
+  @media screen and (max-width: $breakpoint-mobile)
+    @content
+
+@mixin tablet
+  @media screen and (max-width: $breakpoint-tablet)
+    @content
+
+@mixin desktop
+  @media screen and (min-width: $breakpoint-tablet)
+    @content
+
+// Decorators
+
+@mixin small-caps
+  font-size: 0.75em
+  letter-spacing: 0.05em
+  text-transform: uppercase
