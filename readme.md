@@ -1,6 +1,6 @@
 # Kirby
 
-Kirby is a file-based CMS.
+[Kirby](http://getkirby.com/) is a file-based CMS.
 Easy to setup. Easy to use. Flexible as hell.
 
 ## Trial
@@ -11,33 +11,26 @@ tool for your next project.
 
 ## Buy a license
 
-You can purchase your Kirby license at
-<http://getkirby.com/buy>
+You can purchase your Kirby license at <http://getkirby.com/buy>
 
-A Kirby license is valid for a single domain. You can find 
-Kirby's license agreement here: <http://getkirby.com/license>
+A Kirby license is valid for a single domain. You can find Kirby's license agreement here: <http://getkirby.com/license>
+
+Buy one. Bastian has created an incredible tool for us.
 
 ## The Plainkit
 
 Kirby's Plainkit is the most minimal setup you can get started with.
-It does not include any content, styles or other kinds of decoration, 
-so it's perfect to use this as a starting point for your own project.
+It's perfect to use as a starting point for your own project. A set of Sass partials and a `Gruntfile` exist to 
 
 ## The Panel
 
-You can find the login for Kirby's admin interface at
-http://yourdomain.com/panel. You will be guided through the signup
-process for your first user, when you visit the panel
-for the first time.
+You can find the login for Kirby's admin interface at http://yourdomain.com/panel. You will be guided through the signup process for your first user, when you visit the panel for the first time.
 
 ## Installation
 
-Kirby does not require a database, which makes it very easy to
-install. Just copy Kirby's files to your server and visit the
-URL for your website in the browser.
+Kirby does not require a database, which makes it very easy to install. Just copy Kirby's files to your server and visit the URL for your website in the browser.
 
-**Please check if the invisible .htaccess file has been
-copied to your server correctly**
+**Please check if the invisible .htaccess file has been copied to your server correctly**
 
 ### Requirements
 
@@ -45,23 +38,20 @@ Kirby runs on PHP 5.3+, Apache or Nginx.
 
 ### Download
 
-You can download the latest version of the Starterkit
-from http://download.getkirby.com
+You can download the latest version of the Starterkit from http://download.getkirby.com
 
 ### With Git
 
-If you are familiar with Git, you can clone Kirby's
-Starterkit repository from Github.
+If you are familiar with Git, you can clone this fork of Kirby's Plainkit repository from GitHub.
 
-    git clone --recursive https://github.com/getkirby/plainkit.git
+    git clone --recursive https://github.com/AugustMiller/plainkit.git
 
 ## Documentation
 <http://getkirby.com/docs>
 
 ## Issues and feedback
 
-If you have a Github account, please report issues
-directly on Github:
+If you have a Github account, please report issues directly on Github. The canonical repositories are listed, here:
 
 - <https://github.com/getkirby/kirby/issues>
 - <https://github.com/getkirby/panel/issues>
