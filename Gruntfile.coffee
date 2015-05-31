@@ -50,11 +50,11 @@ module.exports = (grunt) ->
     root: '<%= cwd %>'
 
     # CoffeeScript -> JS
-    scripts_in: '<%= assets %>/coffee/*.coffee'
+    scripts_in: '<%= assets %>/coffee/**/*.coffee'
     scripts_out: '<%= assets %>/js/'
 
     # Sass -> CSS
-    styles_in: '<%= assets %>/sass/<%= pkg.name %>.sass'
+    styles_in: '<%= assets %>/sass/**/*.sass'
     styles_out: '<%= assets %>/css/<%= pkg.name %>.css'
 
   # Helpers
