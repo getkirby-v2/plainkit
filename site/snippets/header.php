@@ -8,6 +8,7 @@
   <title><?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?></title>
 
   <?= css('assets/css/plainkit.css') ?>
+  <?= css('@auto') ?>
 
 </head>
 <body>
