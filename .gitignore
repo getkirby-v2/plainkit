@@ -5,5 +5,7 @@
 /assets/js/*.js
 /assets/avatars
 
+/content
+
 .sass-cache
 node_modules

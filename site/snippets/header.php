@@ -5,10 +5,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-  <title><?php echo $site->title()->html() ?> | <?php echo $page->title()->html() ?></title>
+  <title><?= $site->title()->html() ?> | <?= $page->title()->html() ?></title>
 
-  <?= css('assets/css/plainkit.css') ?>
+  <?= css('assets/css/app.css') ?>
   <?= css('@auto') ?>
 
 </head>
 <body>
+  <header>
+    Header
+  </header>
+  <main>
