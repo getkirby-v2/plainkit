@@ -1,5 +1,8 @@
 .DS_Store
 /site/accounts
+/site/cache
+/site/config/*
+!/site/config/config.php
 /thumbs/*
 /assets/css
 /assets/js/*.js

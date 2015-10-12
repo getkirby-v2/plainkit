@@ -1,69 +1,54 @@
-# Kirby
+# Kirby Plainkit
 
-[Kirby](http://getkirby.com/) is a file-based CMS.
-Easy to setup. Easy to use. Flexible as hell.
+> Not so plain, really. This is a great place to start if you like Sass & CoffeeScript
 
-## Trial
+## Setup
 
-You can try Kirby on your local machine or on a test
-server as long as you need to make sure it is the right
-tool for your next project.
+This project is based on Kirby CMS. Additional requirements include:
 
-## Buy a license
+- PHP version 5.4 or newer
+- [Node](https://nodejs.org) and NPM (Installed with [Brew](http://brew.sh), if possible)
 
-You can purchase your Kirby license at <http://getkirby.com/buy>
+To get started, use the GitHub application to clone the repository, or run:
 
-A Kirby license is valid for a single domain. You can find Kirby's license agreement here: <http://getkirby.com/license>
+```
+$ git clone --recursive git@github.com:AugustMiller/plainkit.git
+$ cd plainkit
+```
 
-Buy one. Bastian has created an incredible tool for us.
+It's important that the `--recursive` flag is set, because we include a number of dependencies as submodules.
 
-## The Plainkit
+You'll need to create a few folders (if they don't exist, already) for things to work correctly:
 
-Kirby's Plainkit is the most minimal setup you can get started with.
-It's perfect to use as a starting point for your own project. A set of Sass partials and a `Gruntfile` exist to 
+```
+$ mkdir site/accounts assets/avatars thumbs site/config
+```
 
-## The Panel
+Then, fire up a PHP development server, on an available port:
 
-You can find the login for Kirby's admin interface at http://yourdomain.com/panel. You will be guided through the signup process for your first user, when you visit the panel for the first time.
+```
+$ php -S localhost:8000
+```
+Things will be pretty broken, right off the bat, but pulling down the `devDependencies` declared in `package.json` will get you most of the way there:
 
-## Installation
+```
+$ npm install
+```
 
-Kirby does not require a database, which makes it very easy to install. Just copy Kirby's files to your server and visit the URL for your website in the browser.
+We use [Gulp](http://gulpjs.com) to consolidate the compilation of Sass and Coffeescript. Front-end Javascript is in the CommonJS architectre, and Browserify handles proper concatenation. Get going with a simple:
 
-**Please check if the invisible .htaccess file has been copied to your server correctly**
+```
+$ gulp watch
+```
 
-### Requirements
+### Content
 
-Kirby runs on PHP 5.3+, Apache or Nginx.
+This is up to you! A basic content folder exists, and should be modified or trashed.
 
-### Download
+### Configuration
 
-You can download the latest version of the Starterkit from http://download.getkirby.com
+Add sensitive configuration to your environment-specific config file, as `site/config/config.localhost.php`, where `localhost` is the domain of the targeted environment. The standard `config.php` is tracked in the repository, by default, to store some environment-agnostic settings.
 
-### With Git
-
-If you are familiar with Git, you can clone this fork of Kirby's Plainkit repository from GitHub.
-
-    git clone --recursive https://github.com/AugustMiller/plainkit.git
-
-## Documentation
-<http://getkirby.com/docs>
-
-## Issues and feedback
-
-If you have a Github account, please report issues directly on Github. The canonical repositories are listed, here:
-
-- <https://github.com/getkirby/kirby/issues>
-- <https://github.com/getkirby/panel/issues>
-- <https://github.com/getkirby/plainkit/issues>
-
-Otherwise you can use Kirby's forum: http://getkirby.com/forum
-or send us an email: <support@getkirby.com>
-
-## Support
-<http://getkirby.com/support>
-
-## Copyright
-
-© 2009-2014 Bastian Allgeier (Bastian Allgeier GmbH)
-<http://getkirby.com>
+```php
+c::set('custom.config.var', 'your-super-secret-key');
+```
