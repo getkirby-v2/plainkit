@@ -41,6 +41,8 @@ We use [Gulp](http://gulpjs.com) to consolidate the compilation of Sass and Coff
 $ gulp watch
 ```
 
+When you're ready to deploy, `$ gulp build` will generate minified versions of `app.css` and `app.js`. This can be added as a local task for [Capistrano](http://capistranorb.com), or done manually prior to `rsync`.
+
 ### Content
 
 This is up to you! A basic content folder exists, and should be modified or trashed.
