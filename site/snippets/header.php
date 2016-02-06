@@ -11,7 +11,7 @@
   <?= css('@auto') ?>
 
 </head>
-<body>
+<body class="<?= Help::body_classes() ?>">
   <header>
     Header
   </header>
