@@ -41,7 +41,7 @@ We use [Gulp](http://gulpjs.com) to consolidate the compilation of Sass and Coff
 $ gulp watch
 ```
 
-When you're ready to deploy, `$ gulp build` will generate minified versions of `app.css` and `app.js`. This can be added as a local task for [Capistrano](http://capistranorb.com), or done manually prior to `rsync`.
+When you're ready to deploy, `$ gulp build` will generate minified versions of `app.css` and `app.js`. This is already set up as a local task for [Capistrano](http://capistranorb.com), but you can run it manually, prior to using `rsync` or `scp`. Always remember to set up an ignore list before executing a command that overwrites remote files!
 
 ### Starting a new Project
 
