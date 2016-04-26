@@ -45,14 +45,14 @@ When you're ready to deploy, `$ gulp build` will generate minified versions of `
 
 ### Starting a new Project
 
-To use this as the starting point for a new project, clone it, as you ordinarily would:
+To use this as the starting point for a new project, clone it as you ordinarily would, but specifying a directory name:
 
 ```
 git clone --recursive git@github.com:AugustMiller/plainkit.git new-project
 cd new-project
 ```
 
-Create your new project repository on GitHub, and replace the `origin` url in the config:
+Create your new project repository on GitHub, and replace the `origin` URL in the config:
 
 ```
 git remote remove origin
