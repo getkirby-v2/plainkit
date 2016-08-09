@@ -73,3 +73,21 @@ Add sensitive configuration to your environment-specific config file, as `site/c
 ```php
 c::set('custom.config.var', 'your-super-secret-key');
 ```
+
+## Legal
+
+Code in this repository may not be used on live web servers without a license, available on the [Kirby website](https://getkirby.com/).
+
+Kirby, the Kirby Toolkit and Kirby Panel are all subject to their respective licenses. Please observe the terms of each when using any code herein.
+
+### Buy a license
+
+You can purchase your Kirby license at http://getkirby.com/buy.
+
+A Kirby license is valid for a single domain. You can find Kirby's license agreement here: http://getkirby.com/license.
+
+### Copyright
+
+© 2009-2016 Bastian Allgeier (Bastian Allgeier GmbH) http://getkirby.com
+
+:deciduous_tree:
