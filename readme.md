@@ -12,7 +12,7 @@ This project is based on Kirby CMS. Additional requirements include:
 To get started, use the GitHub application to clone the repository, or run:
 
 ```
-$ git clone --recursive git@github.com:AugustMiller/plainkit.git
+$ git clone --recursive https://github.com/AugustMiller/plainkit.git
 $ cd plainkit
 ```
 
