@@ -48,7 +48,7 @@ When you're ready to deploy, `$ gulp build` will generate minified versions of `
 To use this as the starting point for a new project, clone it as you ordinarily would, but specifying a directory name:
 
 ```
-git clone --recursive git@github.com:AugustMiller/plainkit.git new-project
+git clone --recursive https://github.com/AugustMiller/plainkit.git new-project
 cd new-project
 ```
 
@@ -56,7 +56,7 @@ Create your new project repository on GitHub, and replace the `origin` URL in th
 
 ```
 git remote remove origin
-git remote add origin git@github.com:username/new-project.git
+git remote add origin https://github.com/username/new-project.git
 git push origin master
 ```
 
