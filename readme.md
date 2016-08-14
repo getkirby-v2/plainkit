@@ -27,8 +27,10 @@ $ mkdir site/accounts assets/avatars thumbs site/config
 Then, fire up a PHP development server, on an available port:
 
 ```
-$ php -S localhost:8000
+$ php -S localhost:8000 -t app
 ```
+The `-t` flag sets the web root to the `app` directory. We do this to protect leakage of source files and other configuration details into production environments. If you're using an Apache VirtualHost, make sure you use the `app` directory as your `DocumentRoot`!
+
 Things will be pretty broken, right off the bat, but pulling down the `devDependencies` declared in `package.json` will get you most of the way there:
 
 ```
