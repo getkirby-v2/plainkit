@@ -1,14 +1,14 @@
 .DS_Store
-/site/accounts
-/site/cache
-/site/config/*
-!/site/config/config.php
-/thumbs/*
-/assets/css
-/assets/js/*.js
-/assets/avatars
+/app/site/accounts
+/app/site/cache
+/app/site/config/*
+!/app/site/config/config.php
+/app/thumbs/*
+/app/assets/css
+/app/assets/js/*.js
+/app/assets/avatars
 
-/content
+/app/content
 
 .sass-cache
 node_modules
