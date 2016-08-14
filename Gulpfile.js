@@ -11,14 +11,14 @@ var gulp = require('gulp'),
 
 var paths = {
   scripts: {
-    main: ['assets/coffee/app.coffee'],
-    listen: ['assets/coffee/**/*.coffee'],
-    out: 'assets/js'
+    main: ['src/coffee/app.coffee'],
+    listen: ['src/coffee/**/*.coffee'],
+    out: 'app/assets/js'
   },
   stylesheets: {
-    main: ['assets/sass/app.sass'],
-    listen: ['assets/sass/**/*.sass'],
-    out: 'assets/css'
+    main: ['src/sass/app.sass'],
+    listen: ['src/sass/**/*.sass'],
+    out: 'app/assets/css'
   }
 };
 
@@ -28,7 +28,7 @@ var templates = {
       .pipe(coffeeify({
         options: {
           debug: !mangle,
-          paths: [__dirname + '/node_modules', __dirname + '/assets/coffee']
+          paths: [__dirname + '/node_modules', __dirname + '/src/coffee']
         }
       }))
       .pipe(test(mangle, uglify(), null))
@@ -57,7 +57,7 @@ gulp.task('scripts:build', ['scripts:clean'], function () {
 });
 
 gulp.task('scripts:clean', function () {
-  del(['assets/js/*.js']);
+  del(['app/assets/js/*.js']);
 });
 
 gulp.task('scripts:watch', function () {
@@ -75,7 +75,7 @@ gulp.task('stylesheets:build', ['stylesheets:clean'], function () {
 });
 
 gulp.task('stylesheets:clean', function () {
-  del(['assets/css/*.css']);
+  del(['app/assets/css/*.css']);
 });
 
 gulp.task('stylesheets:watch', function () {
