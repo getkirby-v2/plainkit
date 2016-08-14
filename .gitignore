@@ -5,7 +5,7 @@
 !/app/site/config/config.php
 /app/thumbs/*
 /app/assets/css
-/app/assets/js/*.js
+/app/assets/js/
 /app/assets/avatars
 
 /app/content
