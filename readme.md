@@ -21,7 +21,7 @@ It's important that the `--recursive` flag is set, because we include a number o
 You'll need to create a few folders (if they don't exist, already) for things to work correctly:
 
 ```
-$ mkdir site/accounts assets/avatars thumbs site/config
+$ mkdir app/site/accounts app/assets/avatars app/thumbs app/site/config
 ```
 
 Then, fire up a PHP development server, on an available port:
@@ -29,6 +29,7 @@ Then, fire up a PHP development server, on an available port:
 ```
 $ php -S localhost:8000 -t app
 ```
+
 The `-t` flag sets the web root to the `app` directory. We do this to protect leakage of source files and other configuration details into production environments. If you're using an Apache VirtualHost, make sure you use the `app` directory as your `DocumentRoot`!
 
 Things will be pretty broken, right off the bat, but pulling down the `devDependencies` declared in `package.json` will get you most of the way there:
