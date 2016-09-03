@@ -9,7 +9,7 @@ namespace :assets do
   desc 'Upload Static Assets'
   task :upload do
     on roles(:web) do
-      ['app/assets/css/app.css', 'app/assets/js/app.js'].each do |asset|
+      ['app/assets/css', 'app/assets/js'].each do |asset|
         upload! asset, "#{release_path}/#{asset}", recursive: true
       end
     end
