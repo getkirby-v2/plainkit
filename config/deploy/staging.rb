@@ -34,7 +34,7 @@ server fetch(:app_domain), user: 'deploy', roles: ['web']
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
 
-set :stage_config_file, -> { "site/config/config.#{fetch(:app_domain)}.php" }
+set :stage_config_file, -> { "app/site/config/config.#{fetch(:app_domain)}.php" }
 set :linked_files, fetch(:linked_files, []).push(
   fetch(:stage_config_file)
 )
