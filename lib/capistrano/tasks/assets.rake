@@ -9,8 +9,8 @@ namespace :assets do
   desc 'Upload Static Assets'
   task :upload do
     on roles(:web) do
-      ['assets/css/app.css', 'assets/js/app.js'].each do |asset|
-        upload! asset, "#{shared_path}/#{asset}"
+      ['app/assets/css/app.css', 'app/assets/js/app.js'].each do |asset|
+        upload! asset, "#{release_path}/#{asset}"
       end
     end
   end

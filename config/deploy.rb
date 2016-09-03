@@ -32,13 +32,11 @@ set :log_level, :info
 # Default value for linked_dirs is []
 # set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
 set :linked_dirs, fetch(:linked_dirs, []).push(
-  'content',
-  'site/accounts',
-  'site/cache',
-  'thumbs',
-  'assets/avatars',
-  'assets/css',
-  'assets/js'
+  'app/content',
+  'app/site/accounts',
+  'app/site/cache',
+  'app/thumbs',
+  'app/assets/avatars'
 )
 
 # Default value for default_env is {}
