@@ -67,7 +67,7 @@ Don't forget to update your server information in the Capistrano configuration f
 
 ### Content
 
-This is up to you! A basic content folder exists, and should be modified or trashed.
+This is up to you! Kirby won't run properly without at least `home` and `error` pages. Make sure you use the [multi-language-compatible file names](https://getkirby.com/docs/languages/content) for everything you add to the content folder, manually.
 
 ### Configuration
 
