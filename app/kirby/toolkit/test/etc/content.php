@@ -1,1 +1,0 @@
-My test content is <?php echo $var ?>

@@ -1,9 +1,0 @@
-CamelCase: test
-----
-lowercase: test
-----
-UPPERCASE: test
-----
-Name-With-Dashes: test
-----
-Name_With_Underscores: test
