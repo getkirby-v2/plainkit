@@ -10,7 +10,7 @@
 set :app_domain, 'your.domain'
 server fetch(:app_domain), user: 'deploy', roles: ['web']
 
-
+# set :deploy_to, '/path/to/your/deploy/directory'
 
 # role-based syntax
 # ==================
