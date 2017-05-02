@@ -7,7 +7,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     test = require('gulp-if'),
     del = require('del'),
-    rename = require('gulp-rename');
+    rename = require('gulp-rename'),
+    autoprefixer = require('gulp-autoprefixer');
 
 var paths = {
   scripts: {
@@ -40,6 +41,10 @@ var templates = {
         outputStyle: (compress ? 'compressed' : 'expanded'),
         includePaths: require('node-neat').includePaths.concat(require('node-reset-scss').includePath)
       }).on('error', sass.logError))
+      .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+      }))
       .pipe(gulp.dest(paths.stylesheets.out));
 
     return stream;
