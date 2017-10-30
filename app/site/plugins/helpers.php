@@ -5,13 +5,18 @@
   }
 
   # Asset Fetcher
-  public static function asset ($type, $filename) {
+  public static function asset_url ($type, $filename) {
     return site()->url() . '/assets/' . $type . '/' . $filename;
+  }
+
+  # Asset Fetcher
+  public static function asset_file ($type, $filename) {
+    return new Media(kirby()->roots->assets() . DS . $type . DS . $filename);
   }
 
   # Asset Inliner
   public static function inline_asset ($type, $filename) {
-    return f::read(kirby()->roots->assets() . DS . $type . DS . $filename);
+    return static::asset_file($type, $filename)->content();
   }
 
   # Content Inliner
@@ -19,20 +24,11 @@
     return f::read($file);
   }
 
-  # Resizer
-  public static function resize ($image, $size = false) {
-    switch ($size) {
-      # Custom Image Size IDs
-      /*
-      case 'normal':
-        return thumb($image, [
-          'width' => 1280,
-          'quality' => 75
-        ]);
-        break;
-      */
-      default:
-        return $image;
-    }
+  # Versioned Asset URLs
+  public static function versioned_asset_url ($type, $filename) {
+    $file = static::asset_file($type, $filename);
+
+    # url::build takes a hash of URL options, and a base URL:
+    return url::build(['query' => ['mtime' => $file->modified()]], static::asset_url($type, $filename));
   }
 }

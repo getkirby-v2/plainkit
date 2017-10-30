@@ -7,9 +7,9 @@
 
   <title><?= $site->title()->html() ?> | <?= $page->title()->html() ?></title>
 
-  <?= css('assets/css/app.css') ?>
-  <?= css('@auto') ?>
-
+  <?= css([
+    Help::versioned_asset_url('css', 'app.css')
+  ]) ?>
 </head>
 <body class="<?= Help::body_classes() ?>">
   <header>

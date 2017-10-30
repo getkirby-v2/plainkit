@@ -2,6 +2,8 @@
     <footer>
       Footer
     </footer>
-    <?= js(['@auto', 'assets/js/app.js']) ?>
+    <?= js([
+      Help::versioned_asset_url('js', 'app.js')
+    ]) ?>
   </body>
 </html>
