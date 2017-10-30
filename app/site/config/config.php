@@ -10,3 +10,11 @@ c::set('languages', [
     'url'     => '/',
   ]
 ]);
+
+# Custom thumbnail definitions:
+c::set('thumbs.presets', [
+  'safe' => [
+    'width' => 2880,
+    'quality' => 50
+  ]
+]);
