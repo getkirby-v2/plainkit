@@ -1,6 +1,6 @@
 <?
 
-# All sites might as well start out as multi-language.
+# Multi-lang is enabled, by default:
 c::set('languages', [
   [
     'code'    => 'en',
