@@ -1,6 +1,6 @@
 queue = document.body.className.split ' '
 
-actions =
+playbook =
   before: require 'init/before'
   after: require 'init/after'
   common: require 'init/common'
@@ -8,10 +8,16 @@ actions =
   # 'template-name': require './template-name'
   # 'page-slug': require './page-slug'
 
-actions.before()
-actions.common()
+playbook.before()
+playbook.common()
 
-for action in queue
-  actions[action]?.call()
+for hook in queue
+  if hook in Object.keys playbook
+    action = playbook[hook]
 
-actions.after()
+    if Array.isArray action
+      action[task].call() for task of action
+    else
+      action.call()
+
+playbook.after()

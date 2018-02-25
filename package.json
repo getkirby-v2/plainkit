@@ -1,24 +1,31 @@
 {
   "name": "plainkit",
   "version": "1.0.0",
+  "browserslist": {
+    "production": [
+      "last 2 versions"
+    ]
+  },
   "devDependencies": {
-    "browserify": "^10.2.4",
-    "coffeeify": "^1.1.0",
-    "del": "^1.2.0",
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-coffee": "^2.3.1",
-    "gulp-coffeeify": "^0.1.8",
-    "gulp-concat": "^2.6.0",
-    "gulp-if": "^1.2.5",
-    "gulp-livereload": "~3.8.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.0.3",
-    "gulp-uglify": "^1.2.0",
-    "gulp-util": "^3.0.6",
-    "jquery": "^2.1.4",
-    "node-bourbon": "^4.2.3",
-    "node-neat": "^1.7.2",
-    "node-reset-scss": "^1.0.1"
+    "app-module-path": "^2.2.0",
+    "autoprefixer": "^8.0.0",
+    "browserify": "^16.1.0",
+    "coffeeify": "^3.0.1",
+    "coffeescript": "^1.12.7",
+    "node-sass": "^4.7.2",
+    "npm-run-all": "^4.1.2",
+    "postcss-cli": "^5.0.0",
+    "uglify-js": "^3.3.12",
+    "watchify": "^3.10.0"
+  },
+  "dependencies": {
+    "jquery": "^2.1.4"
+  },
+  "scripts": {
+    "dev": "npm-run-all --parallel styles:watch scripts:watch",
+    "styles:build": "node tools/styles.js build",
+    "styles:watch": "node tools/styles.js watch",
+    "scripts:build": "node tools/scripts.js build",
+    "scripts:watch": "node tools/scripts.js watch"
   }
 }
