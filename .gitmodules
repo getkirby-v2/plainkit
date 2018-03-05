@@ -4,3 +4,6 @@
 [submodule "app/kirby"]
 	path = app/kirby
 	url = https://github.com/getkirby/kirby.git
+[submodule "app/site/plugins/map"]
+	path = app/site/plugins/map
+	url = https://github.com/AugustMiller/kirby-map-field.git
