@@ -1,0 +1,25 @@
+/*
+  Screens
+*/
+
+@mixin screen-size ($breakpoint, $constraint: 'min') {
+  @media screen and (#{$constraint}-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin screen--small {
+  @include screen-size(640px, 'max') { @content }
+}
+
+@mixin screen--medium {
+  @include screen-size(640px) { @content }
+}
+
+@mixin screen--large {
+  @include screen-size(1024px) { @content }
+}
+
+@mixin screen--wide {
+  @include screen-size(1400px) { @content }
+}

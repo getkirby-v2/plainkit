@@ -1,0 +1,59 @@
+title: Site Options
+pages:
+  template:
+    - default
+files: true
+fields:
+  # Site Settings
+  title:
+    label: Site Name
+    type: text
+
+  section_meta:
+    label: Metadata + Search
+    type: headline
+  meta_description:
+    label: Site Description
+    type: text
+    help: A blurb about the site. This will appear in search results and social previews.
+  meta_subject:
+    label: Site Subject
+    type: text
+    help: A more succinct version of the above, if available, for bots.
+  meta_keywords:
+    label: Site Keywords
+    type: tags
+  meta_image:
+    label: Site Preview Image
+    type: image
+  meta_analytics_id:
+    label: Google Analytics Tracking ID
+    type: text
+
+  # Location
+  section_location:
+    label: Location
+    type: headline
+  location:
+    label: Primary Location
+    type: map
+
+  # Social
+  section_social:
+    label: Social Profiles
+    type: headline
+  social_profile_twitter:
+    label: Twitter URL
+    type: url
+    width: 1/3
+    icon: twitter
+  social_profile_facebook:
+    label: Facebook URL
+    type: url
+    width: 1/3
+    icon: facebook
+  social_profile_instagram:
+    label: Instagram URL
+    type: url
+    width: 1/3
+    icon: instagram

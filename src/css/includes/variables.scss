@@ -1,0 +1,26 @@
+/*
+  Color
+*/
+
+// Agnostic
+$color__white: #FFF;
+$color__black: #000;
+
+// Site
+// $color__name--variant: #ABC;
+
+/*
+  Typography
+*/
+
+// Fonts
+$type__family--sans: Helvetica, Arial, sans-serif;
+$type__family--serif: Georgia, Times, serif;
+$type__family--default: $type__family--sans;
+
+// Sizes
+$type__size--root: 18px;
+$type__size--normal: 1rem;
+
+// Leading
+$type__leading--default: 1.5;

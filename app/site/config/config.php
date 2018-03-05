@@ -16,5 +16,9 @@ c::set('thumbs.presets', [
   'safe' => [
     'width' => 2880,
     'quality' => 50
+  ],
+  'thumbnail' => [
+    'width' => 1000,
+    'quality' => 50
   ]
 ]);

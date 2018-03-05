@@ -1,6 +1,20 @@
 <? class Help {
-  public static function body_classes ($extra = '') {
-    $classes = [page()->uid(), page()->template(), $extra];
+  public static function body_classes ($extra = []) {
+    if (isset($page)) {
+      $pageClasses = [
+        "document--uid-{$page->uid()}",
+        "document--template-{$page->template()}"
+      ];
+    } else {
+      $pageClasses = [];
+    }
+
+    $defaultClasses = [
+      'document'
+    ];
+
+    $classes = array_merge($defaultClasses, $pageClasses, $extra);
+
     return implode(' ', array_unique($classes));
   }
 

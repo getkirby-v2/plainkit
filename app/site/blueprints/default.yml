@@ -8,3 +8,5 @@ fields:
   text:
     label: Text
     type: textarea
+  metadata:
+    extends: meta

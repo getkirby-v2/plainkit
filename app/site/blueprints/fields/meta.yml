@@ -1,0 +1,28 @@
+type: group
+fields:
+  section_meta:
+    label: Metadata
+    type: headline
+  meta_description:
+    label: Description
+    type: text
+    validate:
+      maxLength: 140
+    width: 1/2
+  meta_image:
+    label: Preview Image
+    type: image
+    width: 1/2
+  date_created:
+    label: Created on
+    type:  date
+    width: 1/2
+    readonly: true
+    default:  now
+  date_updated:
+    label: Updated on
+    type:  date
+    width: 1/2
+    readonly: true
+    default:  now
+    override: true
