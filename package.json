@@ -23,6 +23,7 @@
   },
   "scripts": {
     "dev": "npm-run-all --parallel styles:watch scripts:watch",
+    "build": "npm run styles:build && npm run scripts:build",
     "styles:build": "node tools/styles.js build",
     "styles:watch": "node tools/styles.js watch",
     "scripts:build": "node tools/scripts.js build",

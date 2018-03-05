@@ -1,12 +1,10 @@
-queue = document.body.className.split ' '
+queue = document.body.dataset.action.split ' '
 
 playbook =
   before: require 'init/before'
   after: require 'init/after'
   common: require 'init/common'
-  home: require 'init/home'
-  # 'template-name': require './template-name'
-  # 'page-slug': require './page-slug'
+  default: require 'init/default'
 
 playbook.before()
 playbook.common()

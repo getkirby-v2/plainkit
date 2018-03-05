@@ -2,7 +2,7 @@ namespace :assets do
   desc 'Compile Sass and CoffeeScript with Gulp'
   task :compile do
     run_locally do
-      execute 'gulp build'
+      execute 'npm run build'
     end
   end
 

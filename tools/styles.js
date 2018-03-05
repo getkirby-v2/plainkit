@@ -21,10 +21,9 @@ var render = function (options) {
     sourceMapEmbed: options.compress ? false : true
   }, function (err, result) {
     if (err) {
-      logger.log(`Stylesheet failed to compile:`);
-      console.error(err.formatted);
+      logger.error(err.formatted);
     } else {
-      logger.log(`Stylesheet compiled in ${result.stats.duration}ms`);
+      logger.info(`Stylesheet compiled in ${result.stats.duration}ms`);
 
       postcss([autoprefixer]).process(result.css, {
         map: false,
@@ -36,25 +35,27 @@ var render = function (options) {
 
         fs.writeFile('app/assets/css/app.css', processed.css, function (err) {
           if (!err) {
-            logger.log(`Stylesheet written.`);
+            logger.info(`Stylesheet written.`);
           } else {
-            logger.err(err);
+            logger.error(err);
           }
         });
       });
-
     }
   });
 }
 
-
+// The script behaves differently based on what directive was passed as the first argument:
 if (command == 'watch') {
+  // Create a FSWatcher instance to observe changes to files in the `src/css` folder:
   var watcher = fs.watch('src/css', { recursive: true }, function (type, fileName) {
-    logger.log(`Detected update: ${fileName}`);
+    logger.info(`Detected update: ${fileName}`);
     render();
   });
 
+  // Trigger an initial render, rather than waiting for FSWatcher to emit an event:
   render();
 } else {
+  // Otherwise, do a single render, specifying compression is to be used:
   render({ compress: true });
 }

@@ -30,7 +30,6 @@ var b = browserify({
   plugin: plugins
 });
 
-
 function render (options) {
   options = options || {};
 
@@ -41,7 +40,7 @@ function render (options) {
 
     if (err) {
       logger.error(`Bundle failed to update.`);
-      console.error(err);
+      logger.error(err);
     } else {
       var out = fs.createWriteStream('app/assets/js/app.js');
 
@@ -54,7 +53,9 @@ function render (options) {
 
         if (mangled.error) {
           logger.error(mangled.error);
-          out.end(`console.log("[Error at build time] ${mangled.error}");`);
+
+          // Output a console.error message to the bundle, rather than failing silently:
+          out.end(`console.error("[Error at build time] ${mangled.error}");`);
         } else {
           out.end(mangled.code);
         }
@@ -64,12 +65,17 @@ function render (options) {
 
       logger.log(`Bundle updated in ${new Date().getTime() - timer.getTime()}ms`);
     }
-  })
+  });
 }
 
+// The script behaves differently based on what directive was passed as the first argument:
 if (command == 'watch') {
+  // Watch for Bundle update events, and render:
   b.on('update', render);
+
+  // Perform an initial render, rather than waiting for the Bundle to emit an event:
   render();
 } else if (command == 'build') {
+  // Render with minification, in build mode:
   render({ compress: true });
 }
