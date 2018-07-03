@@ -35,13 +35,13 @@ use Kirby\Panel\Models\Page\Blueprint as PageBlueprint;
 
 class Panel {
 
-  static public $version = '2.5.10';
+  static public $version = '2.5.11';
 
   // minimal requirements
   static public $requires = array(
-    'php'     => '5.4.0',
-    'toolkit' => '2.5.10',
-    'kirby'   => '2.5.10'
+    'php'     => '5.6.0',
+    'toolkit' => '2.5.11',
+    'kirby'   => '2.5.11'
   );
 
   static public $instance;
