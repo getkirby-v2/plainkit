@@ -45,5 +45,5 @@ Starterkit repository from Github.
 
 ## Copyright
 
-© 2009-2016 Bastian Allgeier (Bastian Allgeier GmbH)
-<http://getkirby.com>
+© 2009-2020 Bastian Allgeier (Bastian Allgeier GmbH)
+<https://getkirby.com>
